@@ -22,7 +22,7 @@ function parseFecha(fechaStr) {
   
         card.innerHTML = `
   <div class="img-wrapper">
-    <img src="${l.imagen}" alt="${l.alt}">
+    <img src="https://halconspace.site/${l.imagen}" alt="${l.alt}">
     <span class="estado ${l.estado}">${l.estado.toUpperCase()}</span>
   </div>
   <div class="info">
