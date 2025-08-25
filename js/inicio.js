@@ -19,7 +19,8 @@ function parseFecha(fechaStr) {
       ultimos.forEach(l => {
         const card = document.createElement("div");
         card.className = "card-lanzamiento";
-  
+  /*Para guardar y reemplazar en lugar del boton # de ver detalles*/
+  /*${l.detalleUrl ? `<a href="${l.detalleUrl}" class="btn">Detalles</a>` : ""}*/
         card.innerHTML = `
   <div class="img-wrapper">
     <img src="https://halconspace.site/${l.imagen}" alt="${l.alt}">
@@ -31,7 +32,7 @@ function parseFecha(fechaStr) {
     <p><strong>Vehículo:</strong> ${l.vehiculo}</p>
     <p><strong>Plataforma:</strong> ${l.plataforma ?? "Desconocido"}</p>
     <div class="links">
-      ${l.detalleUrl ? `<a href="${l.detalleUrl}" class="btn">Detalles</a>` : ""}
+      <a href="#" class="btn">Detalles</a>
       ${l.stream ? `<a href="${l.stream}" target="_blank" class="btn live">Ver transmisión</a>` : ""}
     </div>
   </div>

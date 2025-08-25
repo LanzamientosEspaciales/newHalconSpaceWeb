@@ -156,6 +156,8 @@ footer a:hover {
         cursor: pointer;
         color: #ffffff;
         z-index: 1100;
+        position: absolute;
+        right: 50px;
     }
 
     /* Menú oculto por defecto */
