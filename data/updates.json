@@ -1,0 +1,30 @@
+[
+    {
+      "titulo": "Récord histórico: 33 lanzamientos exitosos consecutivos",
+      "fecha": "2024-12-20",
+      "categoria": "Logros",
+      "autor": "Equipo Halcon Space",
+      "resumen": "Halcon Space alcanza un hito sin precedentes con 33 misiones exitosas sin fallos.",
+      "contenido": "Este logro representa años de innovación, mejoras continuas en nuestros sistemas de propulsión y un compromiso inquebrantable con la excelencia operacional. Nuestro equipo de ingenieros ha trabajado incansablemente para perfeccionar cada aspecto de nuestras operaciones de lanzamiento.",
+      "imagen": "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=400&h=300&fit=crop"
+    },
+    {
+      "titulo": "Nuevo sistema de recuperación de primera etapa",
+      "fecha": "2024-12-18",
+      "categoria": "Técnico",
+      "autor": "Dr. Elena Rodriguez",
+      "resumen": "Implementamos mejoras significativas en nuestro sistema de aterrizaje autónomo.",
+      "contenido": "Las nuevas mejoras incluyen algoritmos de navegación más precisos, sistemas de control de vuelo redundantes y capacidades de aterrizaje en condiciones meteorológicas adversas. Esto nos permite aumentar la frecuencia de reutilización de nuestros vehículos.",
+      "imagen": "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=400&h=300&fit=crop"
+    },
+    {
+      "titulo": "Próxima misión interplanetaria anunciada",
+      "fecha": "2024-12-15",
+      "categoria": "Misiones",
+      "autor": "Comando de Misión",
+      "resumen": "Halcon Space anuncia su primera misión a Marte programada para 2025.",
+      "contenido": "La misión 'Águila Roja' será nuestro primer intento de enviar una sonda robótica a Marte. La misión incluye un orbitador y un rover de superficie para estudiar la geología marciana y buscar signos de vida pasada.",
+      "imagen": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=300&fit=crop"
+    }
+  ]
+  

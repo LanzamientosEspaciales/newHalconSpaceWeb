@@ -1,0 +1,30 @@
+[
+    {
+      "nombre": "Merlin 1D",
+      "tipo": "Químico",
+      "combustible": "RP-1/LOX",
+      "empuje": "845 kN",
+      "impulsoEspecifico": "282s",
+      "aplicacion": "Primera etapa Falcon 9",
+      "reutilizable": true
+    },
+    {
+      "nombre": "Merlin 1D Vacuum",
+      "tipo": "Químico",
+      "combustible": "RP-1/LOX",
+      "empuje": "981 kN",
+      "impulsoEspecifico": "348s",
+      "aplicacion": "Segunda etapa Falcon 9",
+      "reutilizable": false
+    },
+    {
+      "nombre": "Raptor",
+      "tipo": "Químico",
+      "combustible": "CH4/LOX",
+      "empuje": "2,200 kN",
+      "impulsoEspecifico": "330s",
+      "aplicacion": "Starship/Super Heavy",
+      "reutilizable": true
+    }
+  ]
+  
