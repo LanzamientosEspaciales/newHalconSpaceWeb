@@ -295,17 +295,20 @@
     background: #1c1c1e;
     border-radius: 15px;
     padding: 20px;
-    max-width: 300px;
-    height: 300px !important;
+    width: 100% !important;   /* que ocupe todo el ancho del contenedor */
+    max-width: 350px;         /* límite en pantallas grandes */
+    height: auto !important;  /* mantener proporción */
+    aspect-ratio: 1/1;        /* asegura que sea cuadrado */
   }
   
-  /* Responsivo */
+  
   @media (max-width: 768px) {
     canvas {
       max-width: 90%;
-      height: 250px !important;
+      aspect-ratio: 1/1;  /* mantiene proporción en móvil */
     }
   }
+  
   
   /* ==== GALERIA DE FOTOS ==== */
 
@@ -378,8 +381,9 @@
   
   .dot {
     display: inline-block;
-    width: 12px;
-    height: 12px;
+    width: 7px;
+    aspect-ratio: 1/1;
+    height: auto;
     margin: 0 5px;
     background: rgba(255,255,255,0.4);
     border-radius: 50%;

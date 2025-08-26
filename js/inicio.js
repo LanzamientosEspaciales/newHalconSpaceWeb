@@ -5,7 +5,7 @@ function parseFecha(fechaStr) {
   }
   
   // Cargar JSON de lanzamientos
-  fetch("json/lanzamientos.json")
+  fetch("https://halconspace.site/json/lanzamientos.json")
     .then(res => res.json())
     .then(lanzamientos => {
       // Ordenamos: primero futuros (programados), luego pasados
@@ -49,68 +49,68 @@ function parseFecha(fechaStr) {
     ////// ESTADISTICAS
 
     document.addEventListener("DOMContentLoaded", () => {
-        fetch("json/estadisticas.json")
-          .then(res => res.json())
-          .then(data => {
-            // Lanzamientos
-            new Chart(document.getElementById("lanzamientosChart"), {
-              type: 'pie',
-              data: {
-                labels: ['Exitosos', 'Fallidos'],
-                datasets: [{
-                  data: [data.lanzamientos.exitosos, data.lanzamientos.fallidos],
-                  backgroundColor: ['#178236', '#A50C36']
-                }]
+      fetch("json/estadisticas.json")
+        .then(res => res.json())
+        .then(data => {
+          const opcionesBase = (titulo) => ({
+            responsive: true,
+            maintainAspectRatio: true, // 🔑 Mantiene proporción cuadrada
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: { color: '#fff' }
               },
-              options: {
-                responsive: true,
-                plugins: {
-                  legend: { position: 'bottom', labels: { color: '#fff' } },
-                  title: { display: true, text: 'Lanzamientos', color: '#fff', font: { size: 16 } }
-                }
+              title: {
+                display: true,
+                text: titulo,
+                color: '#fff',
+                font: { size: 16 }
               }
-            });
-      
-            // Aterrizajes
-            new Chart(document.getElementById("aterrizajesChart"), {
-              type: 'pie',
-              data: {
-                labels: ['Exitosos', 'Fallidos'],
-                datasets: [{
-                  data: [data.aterrizajes.exitosos, data.aterrizajes.fallidos],
-                  backgroundColor: ['#178236', '#A50C36']
-                }]
-              },
-              options: {
-                responsive: true,
-                plugins: {
-                  legend: { position: 'bottom', labels: { color: '#fff' } },
-                  title: { display: true, text: 'Aterrizajes', color: '#fff', font: { size: 16 } }
-                }
-              }
-            });
-      
-            // Vuelos Falcon
-            new Chart(document.getElementById("vuelosChart"), {
-              type: 'pie',
-              data: {
-                labels: ['Falcon 9', 'Falcon Heavy'],
-                datasets: [{
-                  data: [data.vuelosVehiculos.falcon9, data.vuelosVehiculos.falconHeavy],
-                  backgroundColor: ['#193CB8', '#1e1a4d']
-                }]
-              },
-              options: {
-                responsive: true,
-                plugins: {
-                  legend: { position: 'bottom', labels: { color: '#fff' } },
-                  title: { display: true, text: 'Vuelos por Vehículo', color: '#fff', font: { size: 16 } }
-                }
-              }
-            });
-          })
-          .catch(err => console.error("Error cargando estadísticas:", err));
-      });
+            }
+          });
+    
+          // Lanzamientos
+          new Chart(document.getElementById("lanzamientosChart"), {
+            type: 'pie',
+            data: {
+              labels: ['Exitosos', 'Fallidos'],
+              datasets: [{
+                data: [data.lanzamientos.exitosos, data.lanzamientos.fallidos],
+                backgroundColor: ['#178236', '#A50C36']
+              }]
+            },
+            options: opcionesBase("Lanzamientos")
+          });
+    
+          // Aterrizajes
+          new Chart(document.getElementById("aterrizajesChart"), {
+            type: 'pie',
+            data: {
+              labels: ['Exitosos', 'Fallidos'],
+              datasets: [{
+                data: [data.aterrizajes.exitosos, data.aterrizajes.fallidos],
+                backgroundColor: ['#178236', '#A50C36']
+              }]
+            },
+            options: opcionesBase("Aterrizajes")
+          });
+    
+          // Vuelos Falcon
+          new Chart(document.getElementById("vuelosChart"), {
+            type: 'pie',
+            data: {
+              labels: ['Falcon 9', 'Falcon Heavy'],
+              datasets: [{
+                data: [data.vuelosVehiculos.falcon9, data.vuelosVehiculos.falconHeavy],
+                backgroundColor: ['#193CB8', '#1e1a4d']
+              }]
+            },
+            options: opcionesBase("Vuelos por Vehículo")
+          });
+        })
+        .catch(err => console.error("Error cargando estadísticas:", err));
+    });
+    
       
       //// GALERIA DE FOTOS
 

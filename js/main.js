@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("menu-container").innerHTML = data;
 
             // Activar página actual en menú
-            const currentPath = window.location.pathname.split("/").pop();
+            const currentPath = window.location.pathname.toLowerCase(); // toda la ruta
             const menuLinks = document.querySelectorAll("#menu a");
 
             menuLinks.forEach(link => {
-                const page = link.getAttribute("data-page");
+                const page = link.getAttribute("data-page").toLowerCase();
                 if (currentPath.includes(page)) {
                     link.classList.add("active");
                 }
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.body.appendChild(footer);
 });
+
 
 // Google Analytics
 const gtagScript = document.createElement('script');

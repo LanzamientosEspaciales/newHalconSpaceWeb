@@ -52,7 +52,7 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 100px 20px;
     background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
   }
 
